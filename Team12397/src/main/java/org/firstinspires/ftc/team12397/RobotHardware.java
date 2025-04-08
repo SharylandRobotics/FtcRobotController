@@ -32,15 +32,15 @@ public class RobotHardware {
     private DcMotor rightBack = null;
 
 
-    private DcMotor slideMotorL = null;
-    private DcMotor slideMotorR = null;
-
-    private Servo leftExtend = null;
-    private Servo rightExtend = null;
-    private Servo inClawPitch = null;
-    private Servo inClaw = null;
-    private Servo getInClawYaw = null;
-    private Servo outClaw = null;
+//    private DcMotor slideMotorL = null;
+//    private DcMotor slideMotorR = null;
+//
+//    private Servo leftExtend = null;
+//    private Servo rightExtend = null;
+//    private Servo inClawPitch = null;
+//    private Servo inClaw = null;
+//    private Servo getInClawYaw = null;
+//    private Servo outClaw = null;
 
 
 
@@ -60,32 +60,32 @@ public class RobotHardware {
         rightFront = myOpMode.hardwareMap.get(DcMotor.class, "right_front");
         rightBack = myOpMode.hardwareMap.get(DcMotor.class, "right_back");
 
-        slideMotorL = myOpMode.hardwareMap.get(DcMotor.class, "slide_motor_left");
-        slideMotorR = myOpMode.hardwareMap.get(DcMotor.class, "slide_motor_right");
+//        slideMotorL = myOpMode.hardwareMap.get(DcMotor.class, "slide_motor_left");
+//        slideMotorR = myOpMode.hardwareMap.get(DcMotor.class, "slide_motor_right");
 
         leftFront.setDirection(DcMotorSimple.Direction.REVERSE);
         leftBack.setDirection(DcMotorSimple.Direction.REVERSE);
         rightFront.setDirection(DcMotorSimple.Direction.FORWARD);
         rightBack.setDirection(DcMotorSimple.Direction.FORWARD);
 
-        slideMotorL.setDirection(DcMotorSimple.Direction.FORWARD);
-        slideMotorR.setDirection(DcMotorSimple.Direction.REVERSE);
+//        slideMotorL.setDirection(DcMotorSimple.Direction.FORWARD);
+//        slideMotorR.setDirection(DcMotorSimple.Direction.REVERSE);
 
         leftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         leftBack.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         rightFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         rightBack.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        slideMotorL.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        slideMotorR.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+//        slideMotorL.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+//        slideMotorR.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         leftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         leftBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        slideMotorL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        slideMotorR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        slideMotorL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        slideMotorR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         leftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -94,12 +94,12 @@ public class RobotHardware {
 
 
 
-        leftExtend = myOpMode.hardwareMap.get(Servo.class, "leftExtend");
-        rightExtend = myOpMode.hardwareMap.get(Servo.class, "rightExtend");
-        inClawPitch = myOpMode.hardwareMap.get(Servo.class, "inClawPitch");
-        inClaw = myOpMode.hardwareMap.get(Servo.class, "inClaw");
-        getInClawYaw = myOpMode.hardwareMap.get(Servo.class, "getInClawYaw");
-        outClaw = myOpMode.hardwareMap.get(Servo.class, "outClaw");
+//        leftExtend = myOpMode.hardwareMap.get(Servo.class, "leftExtend");
+//        rightExtend = myOpMode.hardwareMap.get(Servo.class, "rightExtend");
+//        inClawPitch = myOpMode.hardwareMap.get(Servo.class, "inClawPitch");
+//        inClaw = myOpMode.hardwareMap.get(Servo.class, "inClaw");
+//        getInClawYaw = myOpMode.hardwareMap.get(Servo.class, "getInClawYaw");
+//        outClaw = myOpMode.hardwareMap.get(Servo.class, "outClaw");
 
         imu = myOpMode.hardwareMap.get(IMU .class, "imu");
         IMU.Parameters parameters = new IMU.Parameters( new RevHubOrientationOnRobot(
@@ -109,6 +109,7 @@ public class RobotHardware {
 
         myOpMode.telemetry.addData(">", "Hardware Initialized");
         myOpMode.telemetry.update();
+
 
     }
 

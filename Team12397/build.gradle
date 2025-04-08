@@ -28,4 +28,6 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.0"))
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.20"
 }

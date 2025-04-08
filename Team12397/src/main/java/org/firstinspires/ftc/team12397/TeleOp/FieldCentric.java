@@ -20,14 +20,21 @@ public class FieldCentric extends LinearOpMode {
         Gamepad luisL = gamepad1;
         Gamepad alexH = gamepad2;
 
+        // Initialize all the hardware, using the hardware class.
+        robot.init();
+
+        // Send a telemetry message to signify the robot waiting; wait for the game to start (driver presses PLAY)
+        waitForStart();
+
 
 
         while (opModeIsActive()) {
 
-            drive = luisL.left_stick_y;
+            drive = - luisL.left_stick_y;
             strafe = luisL.left_stick_x;
             turn = luisL.right_stick_x;
 
+            robot.driveFieldCentric(drive, strafe, turn);
 
 
 
