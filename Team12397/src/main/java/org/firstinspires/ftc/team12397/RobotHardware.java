@@ -112,11 +112,13 @@ public class RobotHardware {
 
 
     }
-
-//     @param Drive     Fwd/Rev driving power(-1.0 to 1.0) +ve is forward
-//     @param Turn      Right/Left turning power(-1.0 to 1.0) +ve is CW
-//     @param Strafe
-
+    /**
+     * Fwd/Rev driving power(-1.0 to 1.0) +ve is forward
+     * Right/Left turning power(-1.0 to 1.0) +ve is CW
+     * @param Drive
+     * @param Strafe
+     * @param Turn
+     */
     public void driveRobotCentric(double Drive,double Strafe, double Turn) {
 
 
